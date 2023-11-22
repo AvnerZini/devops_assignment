@@ -19,4 +19,4 @@ jobs:
         REGISTRY: avzini
         IMAGE_NAME: web-app
         TAG: ${{ github.sha }}    
-      run: docker build . --file Dockerfile --tag $REGISTRY/$IMAGE_NAME:$TAG .
+      run: docker build . --file Dockerfile
