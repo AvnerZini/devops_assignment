@@ -27,4 +27,4 @@ jobs:
           TAG: ${{ github.sha }}        
         with:
           push: true
-          tags: ${REGISTRY}/${IMAGE_NAME}:${TAG}
+          tags: ${REGISTRY}/${IMAGE_NAME}:latest
