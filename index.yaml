@@ -1,0 +1,24 @@
+apiVersion: v1
+entries:
+  webapp:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-11-23T16:38:29.441241+01:00"
+    description: A Helm chart for Kubernetes
+    digest: 135f3df6e6b30ef57590ebf8c14fa7f81d8c0b624603487614699cb1cae9bad3
+    name: webapp
+    type: application
+    urls:
+    - https://avnerzini.github.io/devops_assignment/webapp-0.1.0.tgz
+    version: 0.1.0
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-11-23T16:38:29.441721+01:00"
+    description: A Helm chart for Kubernetes
+    digest: 045a7f03c398e9b80937db662ead153f45533b8a20a4a116888a58caf38478e4
+    name: webapp
+    type: application
+    urls:
+    - https://avnerzini.github.io/devops_assignment/webapp/webapp-0.1.0.tgz
+    version: 0.1.0
+generated: "2023-11-23T16:38:29.440531+01:00"
