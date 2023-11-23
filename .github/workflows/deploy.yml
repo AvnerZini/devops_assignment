@@ -1,0 +1,30 @@
+name: Deploy to GKE
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Google Cloud SDK
+        uses: GoogleCloudPlatform/cloud-sdk-action@v3
+        with:
+          credentials: ${{ secrets.GKE_SA_KEY }}
+          packages: kubectl
+
+      - name: Add Helm repository (if applicable)
+        if: ${{ secrets.HELM_REPO_URL }}
+        run: helm repo add my-repo ${{ secrets.HELM_REPO_URL }}
+
+      - name: Deploy Helm chart
+        run: |
+          helm upgrade \
+            --install my-chart \
+            --namespace default \
+            --set-file values.yaml \
+            my-chart/
