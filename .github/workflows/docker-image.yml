@@ -24,8 +24,7 @@ jobs:
         env:
           REGISTRY: avzini
           IMAGE_NAME: web-app
-          TAG: ${{ github.sha }}        
+          TAG: ${{ github.sha }}
         with:
-          context: .
           push: true
           tags: avzini/web-app:latest
