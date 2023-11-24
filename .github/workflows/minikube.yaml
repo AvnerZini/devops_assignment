@@ -29,6 +29,7 @@ jobs:
       # now you can run kubectl to see the pods in the cluster
       - name: kubectl
         run: |
+          kubectl create namespace webapp
           helm repo add webapp https://avnerzini.github.io/devops_assignment
           helm install -n webapp webapp webapp/webapp
           minikube service list
