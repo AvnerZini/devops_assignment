@@ -32,7 +32,10 @@ jobs:
           kubectl create namespace webapp
           helm repo add webapp https://avnerzini.github.io/devops_assignment
           helm install -n webapp webapp webapp/webapp
+          sleep 15
+          kubectl get all
+          sleep 5
           minikube service list
-          minikube service -n webapp webapp --url
+          minikube service webapp -n webapp --url
           echo -n "------------------opening the service------------------"
-          curl $(minikube service -n webapp webapp --url)/version
+          curl $(minikube service webapp -n webapp --url)/version
