@@ -10,12 +10,12 @@ jobs:
       - name: start minikube
         uses: medyagh/setup-minikube@latest
         id: minikube
-        # with:
-        #   cache: true
-        #   minikube-version: 1.31.2
-        #   driver: docker
-        #   container-runtime: containerd
-        #   kubernetes-version: v1.27.4
+        with:
+          cache: true
+          minikube-version: 1.31.2
+          driver: none
+          # container-runtime: containerd
+          kubernetes-version: v1.27.4
         #   cpus: 4
         #   memory: 4000m
         #   cni: bridge
