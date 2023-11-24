@@ -17,5 +17,5 @@ jobs:
       - id: 'get-credentials'
         uses: 'google-github-actions/get-gke-credentials@v1'
         with:
-          cluster_name: ${{ secrets.GKE_CLUSTER }}
+          cluster_name: 'poc-interview'
           location: 'europe-west1-b'
