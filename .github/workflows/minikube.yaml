@@ -28,4 +28,5 @@ jobs:
           start-args: '--delete-on-failure --subnet 192.168.50.0'
       # now you can run kubectl to see the pods in the cluster
       - name: kubectl
-        run: kubectl get pods -A
+        run: helm install webapp ./webapp
+
