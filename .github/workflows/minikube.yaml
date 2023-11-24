@@ -33,9 +33,9 @@ jobs:
           helm repo add webapp https://avnerzini.github.io/devops_assignment
           helm install -n webapp webapp webapp/webapp
           sleep 15
-          kubectl get all
-          sleep 5
+          kubectl get all -n webapp
           minikube service list
           minikube service webapp -n webapp --url
+          sleep 1000
           echo -n "------------------opening the service------------------"
           curl $(minikube service webapp -n webapp --url)/version
