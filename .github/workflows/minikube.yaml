@@ -11,7 +11,7 @@ jobs:
         uses: medyagh/setup-minikube@latest
         id: minikube
         with:
-          cache: false
+          cache: true
           minikube-version: 1.31.2
           driver: docker
           container-runtime: containerd
@@ -29,5 +29,5 @@ jobs:
       # now you can run kubectl to see the pods in the cluster
       - name: kubectl
         run: helm repo add avzi-webapp https://avnerzini.github.io/devops_assignment
-              helm install my-webapp avzi-webapp/webapp --version 0.1.0
+              helm install my-webapp avzi-webapp/webapp
 
